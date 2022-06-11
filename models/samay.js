@@ -22,11 +22,11 @@ const samaySchema = new Schema(
     },
     startTime: {
       type: Number,
-      required: True,
+      required: true,
     },
     endTime: {
       type: Number,
-      required: True,
+      required: true,
     },
   },
   { timestamps: true }

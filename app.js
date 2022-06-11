@@ -26,20 +26,6 @@ app.use("/raags", raagRoutes);
 app.get("/", (req, res) => {
   res.sendFile("./views/index.html", { root: __dirname });
 });
-app.get("/add-raag", (req, res) => {
-  const raag = new Raag({
-    name: "Bhimpalasi",
-    partOfDay: "Noon",
-  });
-  raag
-    .save()
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      console.log("ERR", err);
-    });
-});
 
 app.get("/about", (req, res) => {
   res.sendFile("./views/about.html", { root: __dirname });
