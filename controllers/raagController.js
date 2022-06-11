@@ -1,4 +1,6 @@
 const Raag = require("../models/raag");
+const Samay = require("../models/samay");
+const { samay_by_id } = require("./samayController");
 
 const all_raags = (req, res) => {
   Raag.find()
@@ -33,15 +35,22 @@ const delete_raag_by_id = (req, res) => {
     });
 };
 const add_raag = (req, res) => {
-  const raag = new Raag({
-    name: "Kalyani",
-    partOfDay: { name: "Midnight", startTime: 20, endTime: 22 },
-    thaat: "Kalyan",
-  });
-  raag
-    .save()
+  Samay.findOne({ name: "Midnight" })
     .then((result) => {
-      res.send(result);
+      console.log("Found samay", result);
+      const raag = new Raag({
+        name: "Kalyani",
+        partOfDay: result,
+        thaat: "Kalyan",
+      });
+      raag
+        .save()
+        .then((result) => {
+          res.send(result);
+        })
+        .catch((err) => {
+          console.log("ERR", err);
+        });
     })
     .catch((err) => {
       console.log("ERR", err);

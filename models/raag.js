@@ -1,43 +1,16 @@
+const { ObjectId } = require("bson");
 const mongoose = require("mongoose");
+const Samay = require("./samay");
 const Schema = mongoose.Schema;
-const Samay = new Schema(
-  {
-    name: {
-      type: String,
-      enum: [
-        "Afternoon",
-        "Late Afternoon",
-        "Dusk",
-        "Evening",
-        "Late Evening",
-        "Night",
-        "Midnight",
-        "Pre-dawn",
-        "Dawn",
-        "Early Morning",
-        "Morning",
-        "Late Morning",
-      ],
-      required: true,
-    },
-    startTime: {
-      type: Number,
-      required: true,
-    },
-    endTime: {
-      type: Number,
-      required: true,
-    },
-  },
-  { timestamps: true }
-);
 const raagSchema = new Schema(
   {
     name: {
       type: String,
       required: true,
     },
-    partOfDay: Samay,
+    partOfDay: {
+      type: ObjectId,
+    },
     season: {
       type: String,
     },
