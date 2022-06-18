@@ -32,11 +32,24 @@ const delete_samay_by_id = (req, res) => {
       console.log("ERR", err);
     });
 };
+const delete_all_samay = (req, res) => {
+  Samay.deleteMany({})
+    .then((result) => {
+      if (result) res.json(result);
+      else {
+        console.log("samay not found");
+        res.status(404).send();
+      }
+    })
+    .catch((err) => {
+      console.log("ERR", err);
+    });
+};
 const add_samay = (req, res) => {
   const samay = new Samay({
-    name: "Midnight",
-    startTime: 20,
-    endTime: 22,
+    name: req.body.name,
+    startTime: req.body.startTime,
+    endTime: req.body.endTime,
   });
   samay
     .save()
@@ -52,4 +65,5 @@ module.exports = {
   samay_by_id,
   add_samay,
   delete_samay_by_id,
+  delete_all_samay,
 };

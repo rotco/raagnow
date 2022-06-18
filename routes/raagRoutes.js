@@ -27,4 +27,8 @@ router.get("/:id", raagController.raag_by_id);
 router.delete("/:id", raagController.delete_raag_by_id);
 // router.post("/", raagController.create_raag);
 router.post("/", raagController.add_raag);
+router.get(
+  "/videos-by-localtime/:localtime",
+  raagController.get_videos_by_client_localtime
+);
 module.exports = router;

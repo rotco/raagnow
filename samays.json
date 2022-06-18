@@ -1,0 +1,3 @@
+{"_id":{"$oid":"62ab84723fa857e0eef39396"},"name":"Midnight","startTime":0,"endTime":2,"createdAt":{"$date":"2022-06-16T19:28:50.145Z"},"updatedAt":{"$date":"2022-06-16T19:28:50.145Z"},"__v":0}
+{"_id":{"$oid":"62ab84963fa857e0eef39398"},"name":"Night","startTime":22,"endTime":0,"createdAt":{"$date":"2022-06-16T19:29:26.966Z"},"updatedAt":{"$date":"2022-06-16T19:29:26.966Z"},"__v":0}
+{"_id":{"$oid":"62ac2310ebe6122ba8f0851a"},"name":"Late Evening","startTime":20,"endTime":22,"createdAt":{"$date":"2022-06-17T06:45:36.782Z"},"updatedAt":{"$date":"2022-06-17T06:45:36.782Z"},"__v":0}
