@@ -11,7 +11,6 @@ const get_videos_by_client_localtime = (req, res) => {
     .then((samay) => {
       if (samay) {
         console.log("samay=", samay);
-
         Raag.find({ partOfDay: samay.id })
           .then((raag) => {
             res.json(raag);

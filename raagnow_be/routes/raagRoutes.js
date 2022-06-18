@@ -1,6 +1,6 @@
 const express = require("express");
 const raagController = require("../controllers/raagController");
-
+const videoController = require("../controllers/videoController");
 const router = express.Router();
 /**
  * @swagger
@@ -30,5 +30,9 @@ router.post("/", raagController.add_raag);
 router.get(
   "/videos-by-localtime/:localtime",
   raagController.get_videos_by_client_localtime
+);
+router.get(
+  "/search-youtube-videos-per-raag/:raag",
+  videoController.search_youtube_videos_per_raag
 );
 module.exports = router;

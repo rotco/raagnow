@@ -8,6 +8,11 @@ const raagSchema = new Schema(
       type: String,
       required: true,
     },
+    synonyms: [
+      {
+        type: String,
+      },
+    ],
     partOfDay: {
       type: ObjectId,
     },
