@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
+**/.DS_Store
 ### Node ###
->>>>>>> ba13dc6 (first commit)
 # Logs
 logs
 *.log
@@ -57,15 +55,6 @@ typings/
 # Optional eslint cache
 .eslintcache
 
-<<<<<<< HEAD
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
-
-=======
->>>>>>> ba13dc6 (first commit)
 # Optional REPL history
 .node_repl_history
 
@@ -82,20 +71,6 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
-<<<<<<< HEAD
-# Next.js build output
-.next
-
-# Nuxt.js build / generate output
-.nuxt
-dist
-
-# Gatsby files
-.cache/
-# Comment in the public line in if your project uses Gatsby and *not* Next.js
-# https://nextjs.org/blog/next-9-1#public-directory-support
-# public
-=======
 # next.js build output
 .next
 
@@ -104,7 +79,6 @@ dist
 
 # react / gatsby 
 public/
->>>>>>> ba13dc6 (first commit)
 
 # vuepress build output
 .vuepress/dist
@@ -116,11 +90,4 @@ public/
 .fusebox/
 
 # DynamoDB Local files
-<<<<<<< HEAD
 .dynamodb/
-
-# TernJS port file
-.tern-port
-=======
-.dynamodb/
->>>>>>> ba13dc6 (first commit)
