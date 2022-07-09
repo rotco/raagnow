@@ -4,6 +4,7 @@ const morgan = require("morgan");
 const raagController = require("./controllers/raagController");
 const raagRoutes = require("./routes/raagRoutes");
 const samayRoutes = require("./routes/samayRoutes");
+const videoRoutes = require("./routes/videoRoutes");
 
 const app = express();
 require("dotenv").config();
@@ -25,6 +26,7 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use("/raags", raagRoutes);
 app.use("/samays", samayRoutes);
+app.use("/videos", videoRoutes);
 app.get("/", (req, res) => {
   res.sendFile("./views/index.html", { root: __dirname });
 });
